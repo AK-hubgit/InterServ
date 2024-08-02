@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap");
+
+// var
+$font-stack: flex;
+$primary-color: #333;
+$colors: (
+  "colorDRe": #900c3f,
+  "colorRe": #c70039,
+  "colorOr": #c70039,
+  "colorDBl": #581845,
+  "colorGr": #daf7a6,
+);
+$F-weights: (
+  "Plight": light,
+  "Pregular": bold,
+);
+
+body {
+  margin: 0;
+  font-family: "Public Sans", sans-serif;
+}
+
+header {
+  background-color: map-get($colors, colorRe);
+  width: 100%;
+
+  #headerBox {
+    width: 90%;
+    margin: 0 auto;
+    display: $font-stack;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .section {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    /*   background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+      font-weight: bolder;  
+    */
+  }
+}
