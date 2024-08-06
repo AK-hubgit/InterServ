@@ -12,3 +12,18 @@ To navigate to a specific lines.
     class="ttl whChus"
     // Why Choose Us
 }
+
+//
+
+    <main>
+      <!-- FF5733 -->
+      <article id="arte">
+        <h1>Service Hub Convenience</h1>
+        <p>Welcome to ServiceHub: Your Ultimate Service Destination</p>
+      </article>
+      <div class="info">
+        <button>Explore our Services</button>
+      </div>
+    </main>
+
+//
