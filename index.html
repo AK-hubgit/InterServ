@@ -7,7 +7,6 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./scss/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap"
       rel="stylesheet"
@@ -17,29 +16,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="./scss/styles.css" />
 
     <script defer src="index.js"></script>
-    <title>Index</title>
+    <title>index</title>
   </head>
   <body>
     <!-- Intersev -->
     <header>
       <div id="headerBox">
-        <div class="section">LOGO</div>
+        <div class="section">Logo</div>
         <nav class="section">
           <ul>
             <li><a href="#HOME">HOME</a></li>
@@ -59,19 +48,19 @@
             />
             <button class="search-button"><i class="fa fa-search"></i></button>
           </div>
+          <div id="profile" class="section">
+            <img
+              class="ic"
+              src="./assets/png/user1.png"
+              alt="img format not supported"
+            />
+            <img
+              class="ic"
+              src="./assets/png/user2.png"
+              alt="img format not supported"
+            />
+          </div>
           <!--  -->
-        </div>
-        <div id="profile" class="section">
-          <img
-            class="ic"
-            src="./assets/png/user1.png"
-            alt="img format not supported"
-          />
-          <img
-            class="ic"
-            src="./assets/png/user2.png"
-            alt="img format not supported"
-          />
         </div>
       </div>
     </header>
@@ -90,73 +79,35 @@
         </div>
         <div class="hero-image">
           <!-- <img src="path/to/your/image.png" alt="Hero Image" /> -->
-          <div
-            id="carouselExampleAutoplaying"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="assets/adv1.png"
-                  class="d-block w-auto"
-                  alt="image not supported"
-                />
+          <!--  -->
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="assets/adv1.png" alt="" />
               </div>
-              <div class="carousel-item">
-                <img
-                  src="assets/adv2.png"
-                  class="d-block w-auto"
-                  alt="image not supported"
-                />
+              <div class="swiper-slide">
+                <img src="assets/adv2.png" alt="" />
               </div>
-              <div class="carousel-item">
-                <img
-                  src="assets/adv3.png"
-                  class="d-block w-auto"
-                  alt="image not supported"
-                />
+              <div class="swiper-slide">
+                <img src="assets/adv3.png" alt="" />
               </div>
-              <div class="carousel-item">
-                <img
-                  src="assets/adv4.png"
-                  class="d-block w-auto"
-                  alt="image not supported"
-                />
+              <div class="swiper-slide">
+                <img src="assets/adv4.jpg" alt="" />
               </div>
-              <div class="carousel-item">
-                <img
-                  src="assets/adv5.png"
-                  class="d-block w-auto"
-                  alt="image not supported"
-                />
+              <div class="swiper-slide">
+                <img src="assets/adv5.png" alt="" />
               </div>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
           </div>
+
+          <!-- Swiper JS -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+          <!--  -->
           <svg
             style="margin: 0 auto; justify-content: center"
             width="75%"

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap");
-@import "~bootstrap/scss/bootstrap";
 
 body {
   margin: 0;
@@ -21,6 +20,15 @@ $colors: (
 $F-weights: (
   "Pslight": light,
   "PSbold": bold,
+  "PSbolder": bolder,
+  "PSlighter": lighter,
+);
+$F-size: (
+  "Bold_46": 46px,
+  "Semi_Bold_32": 32px,
+  "Semi_Bold_28": 28px,
+  "Medium_24": 24px,
+  "Regular_18": 18px,
 );
 @mixin flxMxn {
   display: flex;
@@ -29,34 +37,38 @@ $F-weights: (
 }
 @mixin flxMxnJust($justCont) {
   display: flex;
-  justify-content: $justCont;
   align-items: center;
+  justify-content: $justCont;
 }
 
 header {
   background-color: map-get($colors, colorRe);
   width: 100%;
-  height: 5%;
+  height: 68px;
   color: white;
-
-  font-weight: map-get($F-weights, PSbold);
 
   #headerBox {
     @include flxMxnJust(space-around);
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .section:first-of-type {
+    font-size: map-get($F-size, Semi_Bold_32);
   }
   nav ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    @include flxMxn();
+    gap: 40px;
     margin: 0;
+    padding-left: 0;
   }
   nav ul a {
     color: white;
+    vertical-align: middle;
     text-decoration: none;
+    font-size: map-get($F-size, Regular_18);
   }
   nav ul a:hover {
     color: map-get($colors, colorYl);
@@ -73,18 +85,23 @@ header {
       background-color: white;
       border-radius: 20px;
       overflow: hidden;
+      height: 38px;
+      width: 214px;
+      margin-right: 1rem;
     }
 
     .search-input {
       border: none;
       padding: 10px;
       outline: none;
+      width: 214px;
+      font-size: 12px;
     }
 
     .search-button {
       background-color: #ffc300;
       border: none;
-      padding: 10px;
+      padding: 12px;
       cursor: pointer;
     }
 
@@ -94,14 +111,23 @@ header {
   }
   .section:nth-last-child(1) {
     position: relative;
-    img {
-      width: 50px;
-    }
-    .ic:first-of-type {
+    img:nth-child(1) {
+      width: 38px;
       position: absolute;
       z-index: 1;
       margin: 0 auto;
+      left: 3px;
     }
+    position: relative;
+    img:nth-child(2) {
+      width: 46px;
+    }
+    /*     .ic:first-of-type {
+      position: absolute;
+      z-index: 1;
+      margin: 0 auto;
+      left: -1px;
+    } */
   }
 }
 
@@ -174,16 +200,31 @@ header {
     cursor: pointer;
     border-radius: 5px;
   }
+}
 
-  .hero-image {
-    position: relative;
-    width: 50%;
-    text-align: center;
+.hero-image {
+  position: relative;
+  width: 50%;
+  text-align: center;
+
+  .swiper {
+    // width: 300px;
+    height: 300px;
   }
-  .hero-image img {
-    max-width: 100%;
-    height: 200px;
-    margin: 0 auto;
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    // height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -237,5 +278,3 @@ header {
     border-radius: 20px;
   }
 }
-
-//
