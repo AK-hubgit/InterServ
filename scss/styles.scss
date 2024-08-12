@@ -12,16 +12,17 @@ a {
 $colors: (
   "colorDRe": #900c3f,
   "colorRe": #c70039,
-  "colorOr": #c70039,
   "colorDBl": #581845,
   "colorGr": #daf7a6,
   "colorYl": #ffc300,
+  // Extras
+  "imgOut": #ff5733,
 );
 $F-weights: (
   "Pslight": light,
+  "PSlighter": lighter,
   "PSbold": bold,
   "PSbolder": bolder,
-  "PSlighter": lighter,
 );
 $F-size: (
   "Bold_46": 46px,
@@ -29,6 +30,9 @@ $F-size: (
   "Semi_Bold_28": 28px,
   "Medium_24": 24px,
   "Regular_18": 18px,
+  // Extras
+  "card1": 54px,
+  "card2": 26px,
 );
 @mixin flxMxn {
   display: flex;
@@ -60,13 +64,15 @@ header {
   nav ul {
     list-style: none;
     @include flxMxn();
-    gap: 40px;
+    gap: 20px;
     margin: 0;
     padding-left: 0;
   }
   nav ul a {
     color: white;
-    vertical-align: middle;
+    display: block;
+    width: max-content;
+    // vertical-align: middle;
     text-decoration: none;
     font-size: map-get($F-size, Regular_18);
   }
@@ -219,63 +225,108 @@ header {
     justify-content: center;
     align-items: center;
   }
-
   .swiper-slide img {
+    display: block;
+    object-fit: contain;
+  }
+  /*   .swiper-slide img {
     display: block;
     width: 100%;
     // height: 100%;
     object-fit: cover;
-  }
+  } */
 }
 
 .about-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 50px;
   background-color: white;
 
+  .about-image1 {
+    position: relative;
+    width: 50%;
+    padding-block-start: 5%;
+    padding-inline-end: 30px;
+    overflow: hidden;
+    text-align: right;
+
+    img {
+      position: inherit;
+      width: 90%;
+      height: 85%;
+      border-top-left-radius: 100%;
+      border-top-right-radius: 100%;
+      // border-radius: 50%;
+      object-fit: cover;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 80%;
+      height: 80%;
+      border-top-left-radius: 100%;
+      border-top-right-radius: 100%;
+      border: 5px solid #ff5733;
+      transform: translateX(20px);
+    }
+  }
+
+  /*  */
+
   .about-content {
     max-width: 50%;
+    padding: 20px;
+
+    > p {
+      margin: 20px 0;
+      font-size: map-get($F-size, Regular_18);
+      font-weight: map-get($F-weights, Pslight);
+      color: #333;
+      text-align: justify;
+    }
   }
 
   .about-content h2 {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: map-get($F-size, Bold_46);
+    font-weight: map-get($F-weights, PSbold);
     color: #d41f4f;
-  }
-
-  .about-content p {
-    margin: 20px 0;
-    color: #333;
+    margin: 0;
   }
 
   .about-stats {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 20px;
     margin-top: 20px;
   }
 
   .stat {
+    flex: 1 1 50%;
+    max-width: calc(100% / 2 - 20px);
+    box-sizing: border-box;
+    // flex: 1;
     background-color: #f8f8f8;
-    padding: 20px;
     border-radius: 10px;
     text-align: center;
+    padding-block: 30px;
+    padding-inline: 10px;
   }
 
   .stat h3 {
-    font-size: 24px;
-    color: #d41f4f;
+    font-size: map-get($F-size, card1);
+    color: map-get($colors, colorRe);
+    margin: 0;
   }
 
   .stat p {
-    margin-top: 10px;
+    font-size: map-get($F-size, card2);
+    margin: 0px;
     color: #666;
-  }
-
-  .about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
   }
 }
 
