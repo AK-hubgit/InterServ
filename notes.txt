@@ -30,9 +30,13 @@ To navigate to a specific lines.
 //
 
 
-
+ERRORS
+  An alignment bug: ?
 
   #headerBox {
     @include flxMxnJust(center);
     width: 90%;
     // margin: 0 auto; MISS-ALIGNMENT
+  }
+  not solved yet.
+
