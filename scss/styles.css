@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap");
+body {
+  margin: 0;
+  font-family: "Public Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #c70039;
+  width: 100%;
+  height: 68px;
+  color: white;
+}
+header #headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+header .section:first-of-type {
+  font-size: 32px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding-left: 0;
+}
+header nav ul a {
+  color: white;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 18px;
+}
+header nav ul a:hover {
+  color: #ffc300;
+}
+header .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 5px;
+}
+header .section:nth-child(3) .search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 38px;
+  width: 214px;
+  margin-right: 1rem;
+}
+header .section:nth-child(3) .search-input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  width: 214px;
+  font-size: 12px;
+}
+header .section:nth-child(3) .search-button {
+  background-color: #ffc300;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+header .section:nth-child(3) .search-button i {
+  color: white;
+}
+header .section:nth-last-child(1) {
+  position: relative;
+  position: relative;
+  /*     .ic:first-of-type {
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    left: -1px;
+  } */
+}
+header .section:nth-last-child(1) img:nth-child(1) {
+  width: 38px;
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  left: 3px;
+}
+header .section:nth-last-child(1) img:nth-child(2) {
+  width: 46px;
+}
+
+.container {
+  width: 90%;
+}
+.container .row {
+  display: flex;
+  align-items: center;
+  /*   padding: 10px 0;
+  border-bottom: 1px solid #ddd; */
+}
+.container .icon-column {
+  flex: 0 0 10px; /* Adjust the width as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .icon-column i {
+  font-size: 24px;
+  color: #007bff;
+}
+.container .text-column {
+  flex: 1;
+  padding-left: 10px;
+}
+.container .text-column p {
+  margin: 0;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  padding-inline-end: 10px;
+  background-color: #ff7f50;
+}
+.hero-section .hero-content {
+  max-width: 50%;
+}
+.hero-section .hero-content h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+.hero-section .hero-content span {
+  color: #d41f4f;
+}
+.hero-section .hero-content p {
+  margin: 20px 0;
+  color: white;
+}
+.hero-section .btn {
+  background-color: #d41f4f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero-image {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+.hero-image .swiper {
+  height: 300px;
+}
+.hero-image .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image .swiper-slide img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: white;
+}
+.about-section .about-content {
+  max-width: 50%;
+}
+.about-section .about-content h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #d41f4f;
+}
+.about-section .about-content p {
+  margin: 20px 0;
+  color: #333;
+}
+.about-section .about-stats {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.about-section .stat {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.about-section .stat h3 {
+  font-size: 24px;
+  color: #d41f4f;
+}
+.about-section .stat p {
+  margin-top: 10px;
+  color: #666;
+}
+.about-section .about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}/*# sourceMappingURL=styles.css.map */
+
+/*--profile-arulkumar----*/
+.pcontainer{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+margin: auto;
+}
+.col1{
+ flex: 8%;
+  margin-top: 30px;
+}
+.col2{
+  flex: 30%;
+  margin-left: 16px;
+  margin-top: 30px;
+  height: auto;
+}
+.profileimg{
+  width: 384px;
+  height:368px;
+  margin-left: 28px;
+}
+.name{
+  display: inline;
+  color: #581845;
+}
+#locationicon{
+  font-size: 20px;
+  color: #900C3F;
+  margin-left: 10px;
+}
+#bookicon{
+  font-size: 26px;
+  color: #900C3F;
+  display: end;
+}
+.bookmark{
+  float: inline-end;
+}
+.row1{
+  height: 80px;
+}
+.ratingvalue{
+  font-weight: bold;
+  color: #581845;
+  display: inline;
+}
+#star1,#star2,#star3,#star4{
+  color:#FFC300;
+  font-size: 20px;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+#star5{
+  color:#FFff;
+  font-size: 20px;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.circle{
+  width: 98px;
+  height: 98px;
+  border-radius: 54px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 0px;
+  color: #C70039;
+  float: left;
+  margin-right: 58px;
+}
+.circle p{
+  margin-top: 0px;
+}
+.circle h2{
+  margin-bottom: 0px;
+}
+.clearfix{
+  clear: both;
+}
+.row3{
+  margin-top: 12px;
+}
+.formelement{
+  float: left;
+  margin-right: 32px;
+}
+.formelement h5{
+  color: #360427;
+}
+.servicetype{
+  width: 216px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #C70039;
+  color: #ffff;
+  font-weight: 600;
+}
+#commentbox{
+  width: 464px;
+  height: 162px;
+  border: none;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 36px;
+  border-radius: 6px;
+  color: #360427;
+  padding: 6px 12px;
+  font-size: 18px;
+}
+#btnbook{
+  width: 336px;
+  height: 58px;
+  border-radius: 8px;
+  color: #FFff;
+  background-color: #FF5733;
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 36px;
+  border: none;
+}
+
+/* ----tab----*/
+.row5{
+  margin-top: 46px;
+}
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+  padding-bottom: -4px;
+  border-bottom:4px solid #EBEBEB;
+}
+.tab-links{
+  margin-right: 54px;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  position:relative;
+  color: #360427;
+}
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 4px;
+  background: #C70039;
+  position: absolute;
+  left: 0;
+  bottom: -26px;
+  transition: 0.5s;
+  
+}
+.tab-links.active-tab::after{
+  width: 100%;
+  color: #C70039;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}
+/*--profile-arulkumar end----*/
