@@ -28,3 +28,11 @@ To navigate to a specific lines.
     </main>
 
 //
+
+
+
+
+  #headerBox {
+    @include flxMxnJust(center);
+    width: 90%;
+    // margin: 0 auto; MISS-ALIGNMENT
