@@ -359,6 +359,9 @@ margin: auto;
   color: #360427;
 }
 .tab-links::after{
+  color: #c70039;
+}
+.tab-links::after{
   content: '';
   width: 0;
   height: 4px;
@@ -367,7 +370,6 @@ margin: auto;
   left: 0;
   bottom: -26px;
   transition: 0.5s;
-  
 }
 .tab-links.active-tab::after{
   width: 100%;
@@ -379,4 +381,36 @@ margin: auto;
 .tab-contents.active-tab{
   display: block;
 }
+/*service page ui banner---*/
+#banner{
+  position: relative;
+}
+.bannercontent{
+  position: absolute;
+  top: 350px;
+  right: 200px;
+  text-align: center;
+}
+.bannercontent h1{
+  color: #ff2d00;
+  font-weight:bold ;
+  font-size: 56px;
+  margin-bottom: 0;
+}
+.bannercontent p{
+  color: #581845;
+  margin-top: 4px;
+  font-size: 20px;
+}
+.btnbanner{
+  width: 332px;
+  height: 52px;
+  border: none;
+  border-radius: 12px;
+  color: #581845;
+  background-color: #FFC300;
+  font-weight: bold;
+  font-size: 24px;
+}
+
 /*--profile-arulkumar end----*/
