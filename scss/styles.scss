@@ -48,10 +48,11 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-h1 {
-  font:(
+/* h1 {
+  font (
+    
   )
-}
+} */
 @font-face {
   font-family: "Poppins";
   src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
@@ -149,7 +150,7 @@ header {
   #headerBox {
     @include flxMxnJust(center);
     width: 90%;
-    // margin: 0 auto; MISS-ALIGNMENT
+    margin: 0 auto; /* MISS-ALIGNMENT */
     padding: 10px;
     // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -332,7 +333,7 @@ header {
     }
 
     &::before {
-      content: "../assets/fonts/Poppins/Poppins-Light.ttf";
+      content: "";
       position: absolute;
       top: 60px;
       left: 0;
@@ -406,7 +407,7 @@ header {
   text-align: center;
   font-size: 46px;
   font-weight: bold;
-  margin: 0;
+  margin-block-end: 5rem;
 }
 
 /* OUR SERVICES */
@@ -416,11 +417,83 @@ header {
   padding-inline: 70px;
   background-color: white;
 
+  &:first-of-type  {
+    margin-block-end: 10rem;
+  }
+
   .orserv {
     color: map-get($colors, colorDRe);
     span {
       color: map-get($colors, imgOut);
     }
+  }
+}
+
+.zigzag {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /*   width: 90%;
+  height: max-content;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px; */
+  border-radius: 10px;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  grid-row: span 2; /* Ensures zig-zag pattern by making each card span two rows */
+
+  img {
+    display: block;
+    width: 100%;
+    height: 325px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: -80px;
+    object-position: -120px;
+    filter: brightness(0.7);
+  }
+
+  p {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: map-get($colors, colorRe);
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &:nth-child(odd) {
+    // transform: translateY(20%);
+    top: 20%;
+  }
+
+  &:last-child {
+    background-color: map-get($colors, colorRe);
+
+    p {
+      background-color: map-get($colors, colorRe);
+    }
+    // transform: translateY(20%);
+  }
+
+  &:hover {
+    transform: scale(1);
   }
 }
 
@@ -456,6 +529,14 @@ header {
     p {
       margin: 0;
     }
+  }
+}
+
+.footer-container {
+  @include flxMxnJust(space-evenly);
+
+  .footer_flex {
+    @include flxMxnJust(space-evenly)
   }
 }
 
