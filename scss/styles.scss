@@ -2,12 +2,12 @@
 // devicex
 body {
   margin: 0;
-  font-family: "Public Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Fonts */
 @font-face {
-  font-family: "Roboto";
+  font-family: "Poppins";
   src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -88,28 +88,16 @@ body {
   font-style: normal;
 }
 
-/* Italics and other variants */
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-/*  */
-/*  */
-/*  */
-
 a {
   text-decoration: none;
 }
-// var
-// $primary-color: #333;
+
 $colors: (
   "colorDRe": #900c3f,
   "colorRe": #c70039,
   "colorDBl": #581845,
   "colorGr": #daf7a6,
+  "colorWh": white,
   "colorYl": #ffc300,
   // Extras
   "imgOut": #ff5733,
@@ -122,6 +110,7 @@ $F-weights: (
 );
 $F-size: (
   "Bold_46": 46px,
+  "Bold_20": 20px,
   "Semi_Bold_32": 32px,
   "Semi_Bold_28": 28px,
   "Medium_24": 24px,
@@ -145,10 +134,10 @@ header {
   background-color: map-get($colors, colorRe);
   // width: 100%;
   height: 68px;
-  color: white;
+  color: map-get($colors, colorWh);
 
   #headerBox {
-    @include flxMxnJust(center);
+    @include flxMxnJust(space-between);
     width: 90%;
     margin: 0 auto; /* MISS-ALIGNMENT */
     padding: 10px;
@@ -169,7 +158,7 @@ header {
     padding-left: 0;
   }
   nav ul a {
-    color: white;
+    color: map-get($colors, colorWh);
     display: block;
     width: max-content;
     // vertical-align: middle;
@@ -190,7 +179,7 @@ header {
     .search-container {
       display: flex;
       align-items: center;
-      background-color: white;
+      background-color: map-get($colors, colorWh);
       border-radius: 20px;
       overflow: hidden;
       height: 38px;
@@ -214,7 +203,7 @@ header {
     }
 
     .search-button i {
-      color: white;
+      color: map-get($colors, colorWh);
     }
   }
   .section:nth-last-child(1) {
@@ -253,7 +242,7 @@ header {
   .hero-content h1 {
     font-size: 36px;
     font-weight: bold;
-    color: white;
+    color: map-get($colors, colorWh);
   }
 
   .hero-content span {
@@ -262,12 +251,12 @@ header {
 
   .hero-content p {
     margin: 20px 0;
-    color: white;
+    color: map-get($colors, colorWh);
   }
 
   .btn {
     background-color: #d41f4f;
-    color: white;
+    color: map-get($colors, colorWh);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -312,7 +301,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   padding: 50px;
-  background-color: white;
+  background-color: map-get($colors, colorWh);
 
   .about-image1 {
     position: relative;
@@ -403,11 +392,19 @@ header {
 
 /* TITLES COMMON STYLING */
 
-.ttl h2 {
+.ttl {
+  margin-block: 1rem;
+  margin-block-end: 2rem;
   text-align: center;
-  font-size: 46px;
-  font-weight: bold;
-  margin-block-end: 5rem;
+
+  h2 {
+    font-size: 46px;
+    font-weight: bold;
+    margin: 0;
+  }
+  p {
+    font-size: map-get($F-size, Regular_18);
+  }
 }
 
 /* OUR SERVICES */
@@ -415,9 +412,9 @@ header {
 .blocks {
   margin: 0 auto;
   padding-inline: 70px;
-  background-color: white;
+  background-color: map-get($colors, colorWh);
 
-  &:first-of-type  {
+  &:first-of-type {
     margin-block-end: 10rem;
   }
 
@@ -497,12 +494,105 @@ header {
   }
 }
 
+/* WCU */
+.whChus {
+  background-color: map-get($colors, colorDRe);
+  color: map-get($colors, colorWh);
+  box-sizing: border-box;
+  padding-block-end: 6rem;
+  padding-block-start: 1rem;
+  margin-block-end: 6rem;
+
+  .wrapperD {
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .flxbx {
+    @include flxMxnJust(space-between);
+    gap: 1rem;
+    // height: -webkit-fill-available;
+    flex-wrap: wrap;
+
+    .nos {
+      width: 30%;
+      text-align: left;
+
+      & > h3,
+      p {
+        margin: 0;
+        margin-block-end: 1rem;
+      }
+
+      & > h3:first-of-type {
+        font-size: map-get($F-size, Regular_18);
+        font-weight: map-get($F-weights, PSbold);
+      }
+      & > h3:nth-of-type(2) {
+        font-size: map-get($F-size, Semi_Bold_28);
+        font-weight: map-get($F-weights, PSbold);
+      }
+    }
+  }
+}
+
+/* TSTI */
+.tsti {
+  background-color: map-get($colors, colorYl);
+  box-sizing: border-box;
+  padding-block-end: 6rem;
+  padding-block-start: 1rem;
+  margin-block-end: 6rem;
+
+  .flxbx {
+    @include flxMxnJust(space-between);
+    gap: 1rem;
+    // height: -webkit-fill-available;
+    flex-wrap: wrap;
+
+    .nos {
+      box-sizing: border-box;
+      width: 30%;
+      text-align: left;
+      background-color: map-get($colors, colorWh);
+      border-radius: 12px;
+      padding: 12px;
+
+      p {
+        margin: 0;
+        padding-inline-start: 1rem;
+      }
+    }
+
+    .bx {
+      @include flxMxnJust(space-between);
+      padding-block-end: 12px;
+
+      .vwr {
+        @extend .bx;
+        justify-content: left !important;
+
+        img {
+          width: 52px;
+          height: 52px;
+        }
+
+        .quote {
+          height: 55px;
+        }
+      }
+    }
+    .desc {
+      padding-inline-start: 2rem;
+    }
+  }
+}
+
 /* CONTACT US */
 
 .container {
-  width: 90%;
-  // margin: 0 auto;
-
   .row {
     display: flex;
     align-items: center;
@@ -532,11 +622,139 @@ header {
   }
 }
 
-.footer-container {
-  @include flxMxnJust(space-evenly);
+/* FOOTER */
 
-  .footer_flex {
-    @include flxMxnJust(space-evenly)
+.footer {
+  background-color: #5b1b44;
+  color: #fff;
+  padding-inline: 70px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-block: 2rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .footer-logo h2 {
+      font-size: map-get($F-size, Semi_Bold_32);
+
+      margin-bottom: 20px;
+    }
+
+    .footer-menu {
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 10px;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-newsletter {
+      h3 {
+        font-size: map-get($F-size, Bold_20);
+        margin-bottom: 10px;
+      }
+      form {
+        @include flxMxn();
+        flex-direction: column;
+        align-items: start !important;
+
+        input[type="email"] {
+          width: 100%;
+          padding: 10px;
+          padding-inline-start: 25px;
+          margin-block-end: 10px;
+          border: none;
+          border-radius: 50px;
+          flex: 1;
+        }
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          background-color: map-get($colors, colorYl);
+          color: #5b1b44;
+          font-weight: bold;
+          border-radius: 10px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #e6b800;
+          }
+        }
+      }
+    }
+
+    .footer-download {
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .download-buttons {
+        display: flex;
+
+        a {
+          margin-right: 10px;
+
+          img {
+            width: 8.25rem;
+          }
+        }
+      }
+    }
+  }
+  .footer-social-media {
+    margin-top: 20px;
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    //
+    .social-icons {
+      a {
+        margin: 0 10px;
+        font-size: 24px;
+        color: map-get($colors, colorYl);
+        text-decoration: none;
+
+        &:hover {
+          color: #e6b800;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+
+    p {
+      margin: 0;
+      border-block-start: 1px solid map-get($colors, colorWh);
+      font-size: 14px;
+      padding: 1rem;
+      padding-block-end: 0;
+    }
   }
 }
 
