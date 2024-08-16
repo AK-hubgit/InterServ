@@ -2,91 +2,11 @@
 // devicex
 body {
   margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
 }
 
 /* Fonts */
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins//Poppins-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Continue for other weights like Medium, SemiBold, Bold, ExtraBold, Black, etc. */
-@font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-/* h1 {
-  font (
-    
-  )
-} */
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins//Poppins-Bold.ttf") format("truetype");
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
 
 a {
   text-decoration: none;
@@ -101,8 +21,10 @@ $colors: (
   "colorYl": #ffc300,
   // Extras
   "imgOut": #ff5733,
+  "inp": #fff0f0,
 );
 $F-weights: (
+  "Psnormal": normal,
   "Pslight": light,
   "PSlighter": lighter,
   "PSbold": bold,
@@ -110,14 +32,15 @@ $F-weights: (
 );
 $F-size: (
   "Bold_46": 46px,
-  "Bold_20": 20px,
   "Semi_Bold_32": 32px,
   "Semi_Bold_28": 28px,
   "Medium_24": 24px,
+  "Bold_20": 20px,
   "Regular_18": 18px,
   // Extras
   "card1": 54px,
   "card2": 26px,
+  "button": 22px,
 );
 @mixin flxMxn {
   display: flex;
@@ -128,6 +51,21 @@ $F-size: (
   display: flex;
   align-items: center;
   justify-content: $justCont;
+}
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-md {
+  @media screen and (min-width: 1140px) {
+    @content;
+  }
 }
 
 header {
@@ -379,6 +317,7 @@ header {
 
   .stat h3 {
     font-size: map-get($F-size, card1);
+    font-weight: map-get($F-weights, PSbold);
     color: map-get($colors, colorRe);
     margin: 0;
   }
@@ -386,7 +325,7 @@ header {
   .stat p {
     font-size: map-get($F-size, card2);
     margin: 0px;
-    color: #666;
+    color: inherit;
   }
 }
 
@@ -419,7 +358,7 @@ header {
   }
 
   .orserv {
-    color: map-get($colors, colorDRe);
+    // color: map-get($colors, colorDRe);
     span {
       color: map-get($colors, imgOut);
     }
@@ -448,7 +387,7 @@ header {
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s ease;
-  grid-row: span 2; /* Ensures zig-zag pattern by making each card span two rows */
+  grid-row: span 2;
 
   img {
     display: block;
@@ -592,32 +531,107 @@ header {
 
 /* CONTACT US */
 
-.container {
-  .row {
+.contUs {
+  box-sizing: border-box;
+  padding-block-end: 6rem;
+  padding-block-start: 1rem;
+
+  & span {
+    color: map-get($colors, imgOut);
+  }
+
+  .flxbx {
+    // @include flxMxn();
     display: flex;
-    align-items: center;
-    /*   padding: 10px 0;
-    border-bottom: 1px solid #ddd; */
+    width: 100%;
+    height: 50vh;
+
+    .col {
+      flex: 1;
+    }
   }
 
-  .icon-column {
-    flex: 0 0 10px; /* Adjust the width as needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .frm {
+    background: url("../assets/png/cuBg.png") no-repeat;
+    background-origin: border-box;
+    background-size: 630px;
+    background-position: center;
+
+    form {
+      color: map-get($colors, colorWh);
+      transform: translateY(38px);
+    }
+
+    .row1 {
+      width: fit-content;
+      margin: 0 auto;
+      p {
+        font-size: map-get($F-size, card2);
+      }
+      input,
+      textarea {
+        height: 38px;
+        width: 100%;
+        background-color: map-get($colors, inp);
+        margin-block-end: 1rem;
+        border-radius: 1rem;
+        padding-inline: 1rem;
+        font-size: 1rem;
+      }
+      textarea {
+        height: 103px;
+      }
+      button {
+        display: block;
+        box-sizing: border-box;
+        margin: 0 auto;
+        height: 38px;
+        // padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: map-get($colors, colorYl);
+        font-size: map-get($F-size, button);
+      }
+    }
+
+    label {
+      display: none;
+    }
   }
 
-  .icon-column i {
-    font-size: 24px;
-    color: #007bff;
-  }
-
-  .text-column {
-    flex: 1;
-    padding-left: 10px;
-
-    p {
+  .frmDets {
+    & p,
+    h4 {
       margin: 0;
+    }
+    & > h4 {
+      font-size: map-get($F-size, Semi_Bold_32);
+    }
+
+    .container {
+      margin-block-start: 2rem;
+    }
+
+    .row {
+      @extend .container;
+      @include flxMxnJust(left);
+
+      img {
+        color: map-get($colors, colorRe);
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    .text-column {
+      flex: 1;
+      padding-left: 10px;
+
+      p,
+      address {
+        margin: 0;
+        font-weight: map-get($F-weights, Psnormal);
+        font-size: map-get($F-size, card2);
+      }
     }
   }
 }
@@ -671,13 +685,16 @@ header {
       h3 {
         font-size: map-get($F-size, Bold_20);
         margin-bottom: 10px;
+        color: map-get($colors, colorYl);
       }
+
       form {
         @include flxMxn();
         flex-direction: column;
         align-items: start !important;
 
         input[type="email"] {
+          box-sizing: border-box;
           width: 100%;
           padding: 10px;
           padding-inline-start: 25px;
