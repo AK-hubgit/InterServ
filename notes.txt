@@ -27,7 +27,6 @@ To navigate to a specific lines.
       </div>
     </main>
 
-<<<<<<< HEAD
 //
 
 
@@ -132,6 +131,3 @@ fonts {
 }
 
 ....
-=======
-//
->>>>>>> master
