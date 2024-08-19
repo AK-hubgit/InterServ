@@ -1,6 +1,9 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "bootstrap": "^5.3.3",
+=======
+>>>>>>> master
     "swiper": "^11.1.9"
   }
 }
