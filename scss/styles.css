@@ -624,4 +624,233 @@ header .section:nth-last-child(1) img:nth-child(2) {
 }
 
 /* Arul - start*/
+/*--profile-arulkumar----*/
+.pcontainer {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.col1 {
+  flex: 8%;
+  margin-top: 30px;
+}
+
+.col2 {
+  flex: 30%;
+  margin-left: 16px;
+  margin-top: 30px;
+  height: auto;
+}
+
+.profileimg {
+  width: 384px;
+  height: 368px;
+  margin-left: 28px;
+}
+
+.name {
+  display: inline;
+  color: #581845;
+}
+
+#locationicon {
+  font-size: 20px;
+  color: #900c3f;
+  margin-left: 10px;
+}
+
+#bookicon {
+  font-size: 26px;
+  color: #900c3f;
+  display: end;
+}
+
+.bookmark {
+  float: inline-end;
+}
+
+.row1, .contUs .frm .row1 p {
+  height: 80px;
+}
+
+.ratingvalue {
+  font-weight: bold;
+  color: #581845;
+  display: inline;
+}
+
+#star1,
+#star2,
+#star3,
+#star4 {
+  color: #ffc300;
+  font-size: 20px;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+#star5 {
+  color: white;
+  font-size: 20px;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.circle {
+  width: 98px;
+  height: 98px;
+  border-radius: 54px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding-top: 0px;
+  color: #c70039;
+  float: left;
+  margin-right: 58px;
+}
+
+.circle p {
+  margin-top: 0px;
+}
+
+.circle h2 {
+  margin-bottom: 0px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.row3 {
+  margin-top: 12px;
+}
+
+.formelement {
+  float: left;
+  margin-right: 32px;
+}
+
+.formelement h5 {
+  color: #360427;
+}
+
+.servicetype {
+  width: 216px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #c70039;
+  color: white;
+  font-weight: 600;
+}
+
+#commentbox {
+  width: 464px;
+  height: 162px;
+  border: none;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 36px;
+  border-radius: 6px;
+  color: #360427;
+  padding: 6px 12px;
+  font-size: 18px;
+}
+
+#btnbook {
+  width: 336px;
+  height: 58px;
+  border-radius: 8px;
+  color: white;
+  background-color: #ff5733;
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 36px;
+  border: none;
+}
+
+/* ----tab----*/
+.row5 {
+  margin-top: 46px;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+  padding-bottom: -4px;
+  border-bottom: 4px solid #ebebeb;
+}
+
+.tab-links {
+  margin-right: 54px;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  color: #360427;
+}
+
+.tab-links::after {
+  color: #c70039;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background: #c70039;
+  position: absolute;
+  left: 0;
+  bottom: -26px;
+  transition: 0.5s;
+}
+
+.tab-links.active-tab::after {
+  width: 100%;
+  color: #c70039;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/*service page ui banner---*/
+#banner {
+  position: relative;
+}
+
+.bannercontent {
+  position: absolute;
+  top: 350px;
+  right: 200px;
+  text-align: center;
+}
+
+.bannercontent h1 {
+  color: #ff2d00;
+  font-weight: bold;
+  font-size: 56px;
+  margin-bottom: 0;
+}
+
+.bannercontent p {
+  color: #581845;
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+.btnbanner {
+  width: 332px;
+  height: 52px;
+  border: none;
+  border-radius: 12px;
+  color: #581845;
+  background-color: #ffc300;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/*--profile-arulkumar end----*/
 /* Arul - end *//*# sourceMappingURL=styles.css.map */
