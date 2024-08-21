@@ -449,7 +449,7 @@ header .section:nth-last-child(1) img:nth-child(2) {
   color: white;
   transform: translateY(38px);
 }
-.contUs .frm .row1 {
+.contUs .frm .row1, .contUs .frm .row1 p {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
