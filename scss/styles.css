@@ -10,8 +10,8 @@ a {
 }
 
 header {
+  width: 100%;
   background-color: #c70039;
-  height: 68px;
   color: white;
 }
 header #headerBox {
@@ -19,8 +19,8 @@ header #headerBox {
   align-items: center;
   justify-content: space-between;
   width: 90%;
+  height: 68px;
   margin: 0 auto; /* MISS-ALIGNMENT */
-  padding: 10px;
 }
 header .section:first-of-type {
   font-size: 32px;
@@ -33,15 +33,15 @@ header nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 2rem;
   margin: 0;
   padding-left: 0;
 }
 header nav ul a {
-  color: white;
   display: block;
   width: -moz-max-content;
   width: max-content;
+  color: white;
   text-decoration: none;
   font-size: 18px;
 }
@@ -54,8 +54,6 @@ header .section {
   align-items: center;
   box-sizing: border-box;
   text-align: center;
-  margin: 0 5px;
-  padding: 0 10px 0 0;
 }
 header .section:nth-child(3) .search-container {
   display: flex;
@@ -65,7 +63,7 @@ header .section:nth-child(3) .search-container {
   overflow: hidden;
   height: 38px;
   width: 214px;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 header .section:nth-child(3) .search-input {
   border: none;
@@ -85,23 +83,12 @@ header .section:nth-child(3) .search-button i {
 }
 header .section:nth-last-child(1) {
   position: relative;
-  position: relative;
-  /*     .ic:first-of-type {
-    position: absolute;
-    z-index: 1;
-    margin: 0 auto;
-    left: -1px;
-  } */
+  padding-inline-end: 0;
+  margin-inline-end: 0;
 }
 header .section:nth-last-child(1) img:nth-child(1) {
   width: 38px;
-  position: absolute;
-  z-index: 1;
   margin: 0 auto;
-  left: 3px;
-}
-header .section:nth-last-child(1) img:nth-child(2) {
-  width: 46px;
 }
 
 .hero-section {
@@ -437,28 +424,34 @@ header .section:nth-last-child(1) img:nth-child(2) {
 .contUs .flxbx .col {
   flex: 1;
 }
+.contUs .vector {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .contUs .frm {
-  width: 100%;
-  height: auto;
+  height: 60vh;
   position: relative;
-  background-image: url("../assets/png/cuBg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  /*     background-image: url("../assets/png/cuBg.png");
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat; */
 }
 .contUs .frm form {
   color: white;
 }
-.contUs .frm .row1, .contUs .frm .row1 p {
-  width: -moz-fit-content;
-  width: fit-content;
+.contUs .frm .row1 {
   margin: 0 auto;
+  width: 50%;
 }
 .contUs .frm .row1 p {
   font-size: 26px;
+  margin: 0;
 }
-.contUs .frm .row1 input,
-.contUs .frm .row1 textarea {
+.contUs .frm .row1 input, .contUs .frm .row1 textarea {
   height: 38px;
   width: 100%;
   background-color: #fff0f0;
@@ -466,6 +459,7 @@ header .section:nth-last-child(1) img:nth-child(2) {
   border-radius: 1rem;
   padding-inline: 1rem;
   font-size: 1rem;
+  border: none;
 }
 .contUs .frm .row1 textarea {
   height: 103px;
@@ -564,7 +558,7 @@ header .section:nth-last-child(1) img:nth-child(2) {
   flex-direction: column;
   align-items: start !important;
 }
-.footer .footer-content .footer-newsletter form input[type=email] {
+.footer .footer-content .footer-newsletter form input[type=email], .footer .footer-content .footer-newsletter form .contUs .frm .row1 textarea[type=email], .contUs .frm .row1 .footer .footer-content .footer-newsletter form textarea[type=email] {
   box-sizing: border-box;
   width: 100%;
   padding: 10px;

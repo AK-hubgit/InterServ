@@ -70,17 +70,15 @@ $F-size: (
 }
 
 header {
+  width: 100%;
   background-color: map-get($colors, colorRe);
-  // width: 100%;
-  height: 68px;
   color: map-get($colors, colorWh);
 
   #headerBox {
     @include flxMxnJust(space-between);
     width: 90%;
+    height: 68px;
     margin: 0 auto; /* MISS-ALIGNMENT */
-    padding: 10px;
-    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .section:first-of-type {
     font-size: map-get($F-size, Semi_Bold_32);
@@ -92,15 +90,14 @@ header {
   nav ul {
     list-style: none;
     @include flxMxn();
-    gap: 20px;
+    gap: 2rem;
     margin: 0;
     padding-left: 0;
   }
   nav ul a {
-    color: map-get($colors, colorWh);
     display: block;
     width: max-content;
-    // vertical-align: middle;
+    color: map-get($colors, colorWh);
     text-decoration: none;
     font-size: map-get($F-size, Regular_18);
   }
@@ -111,8 +108,6 @@ header {
     @include flxMxn;
     box-sizing: border-box;
     text-align: center;
-    margin: 0 5px;
-    padding: 0 10px 0 0;
   }
   .section:nth-child(3) {
     .search-container {
@@ -123,7 +118,7 @@ header {
       overflow: hidden;
       height: 38px;
       width: 214px;
-      margin-right: 1rem;
+      margin-right: 2rem;
     }
 
     .search-input {
@@ -147,23 +142,13 @@ header {
   }
   .section:nth-last-child(1) {
     position: relative;
+    padding-inline-end: 0;
+    margin-inline-end: 0;
+
     img:nth-child(1) {
       width: 38px;
-      position: absolute;
-      z-index: 1;
       margin: 0 auto;
-      left: 3px;
     }
-    position: relative;
-    img:nth-child(2) {
-      width: 46px;
-    }
-    /*     .ic:first-of-type {
-      position: absolute;
-      z-index: 1;
-      margin: 0 auto;
-      left: -1px;
-    } */
   }
 }
 
@@ -550,15 +535,20 @@ header {
     }
   }
 
-  .frm {
-    width: 100%;
-    height: auto;
-    position: relative;
+  .vector {
+    position: absolute;
+    width: fit-content;
+    z-index: 0;
+    height: fit-content;
+  }
 
-    background-image: url("../assets/png/cuBg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; // Centers the image within the container
+  .frm {
+    height: 60vh;
+    position: relative;
+    /*     background-image: url("../assets/png/cuBg.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
 
     // padding: 20px;
 
@@ -567,14 +557,14 @@ header {
     }
 
     .row1 {
-      width: fit-content;
       margin: 0 auto;
+      width: 50%;
+
       p {
         font-size: map-get($F-size, card2);
-        @extend .row1;
+        margin: 0;
       }
-      input,
-      textarea {
+      input {
         height: 38px;
         width: 100%;
         background-color: map-get($colors, inp);
@@ -582,9 +572,11 @@ header {
         border-radius: 1rem;
         padding-inline: 1rem;
         font-size: 1rem;
+        border: none;
       }
       textarea {
         height: 103px;
+        @extend input;
       }
       button {
         display: block;
@@ -753,7 +745,7 @@ header {
     //
     .social-icons {
       margin-block-start: 1rem;
-      
+
       a {
         margin-inline-end: 10px;
         font-size: 16px;
