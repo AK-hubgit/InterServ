@@ -31,3 +31,8 @@ function opentab(tabname) {
   document.getElementById(tabname).classList.add("active-tab");
 }
 //end
+
+// Menu bar
+function myFunction(x) {
+  x.classList.toggle("change");
+}
