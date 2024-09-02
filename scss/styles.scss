@@ -1,18 +1,6 @@
 // @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap");
 // commit reverted!git
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-}
-
-/* Fonts */
-
-a {
-  text-decoration: none;
-}
-
 $colors: (
   "colorDRe": #900c3f,
   "colorRe": #c70039,
@@ -43,6 +31,20 @@ $F-size: (
   "card2": 26px,
   "button": 22px,
 );
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: map-get($colors, colorWh);
+}
+
+/* Fonts */
+
+a {
+  text-decoration: none;
+}
+
 @mixin flxMxn {
   display: flex;
   justify-content: center;
@@ -53,18 +55,25 @@ $F-size: (
   align-items: center;
   justify-content: $justCont;
 }
-@mixin media-md {
-  @media screen and (min-width: 768px) {
+
+// md - queries
+@mixin media-sm {
+  @media screen and (max-width: 420px) {
     @content;
   }
 }
 @mixin media-md {
-  @media screen and (min-width: 1024px) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
-@mixin media-md {
-  @media screen and (min-width: 1140px) {
+@mixin media-lg {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xlg {
+  @media screen and (max-width: 1140px) {
     @content;
   }
 }
@@ -81,26 +90,64 @@ header {
     margin: 0 auto; /* MISS-ALIGNMENT */
   }
   .section:first-of-type {
-    font-size: map-get($F-size, Semi_Bold_32);
-
     p {
+      font-size: map-get($F-size, Semi_Bold_32);
       margin: 0;
     }
+    @include media-sm {
+      font-size: 10px;
+    }
   }
+  .Menucontainer {
+    display: none;
+    cursor: pointer;
+    @include media-sm(){
+      display: inline-block;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+  }
+  .change {
+    .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    .bar2 {
+      opacity: 0;
+    }
+    .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+  }
+
   nav ul {
     list-style: none;
     @include flxMxn();
     gap: 2rem;
+    @include media-sm() {
+      gap: 0rem;
+    }
     margin: 0;
     padding-left: 0;
   }
   nav ul a {
     display: block;
+    @include media-sm {
+      display: none;
+    }
     width: max-content;
     color: map-get($colors, colorWh);
     text-decoration: none;
     font-size: map-get($F-size, Regular_18);
   }
+
   nav ul a:hover {
     color: map-get($colors, colorYl);
   }
@@ -119,6 +166,9 @@ header {
       height: 38px;
       width: 214px;
       margin-right: 2rem;
+      @include media-sm {
+        margin-right: 1rem;
+      }
     }
 
     .search-input {
@@ -336,7 +386,6 @@ header {
 .blocks {
   margin: 0 auto;
   padding-inline: 70px;
-  background-color: map-get($colors, colorWh);
 
   &:first-of-type {
     margin-block-end: 10rem;
@@ -479,6 +528,9 @@ header {
     .nos {
       box-sizing: border-box;
       width: 30%;
+      @include media-sm() {
+        width: auto;
+      }
       text-align: left;
       background-color: map-get($colors, colorWh);
       border-radius: 12px;
@@ -526,31 +578,26 @@ header {
   }
 
   .flxbx {
-    // @include flxMxn();
-    display: flex;
+    @include flxMxn();
     width: 100%;
+    height: 50vh;
 
     .col {
+      height: 100%;
       flex: 1;
     }
   }
 
   .vector {
+    display: block;
     position: absolute;
-    width: fit-content;
-    z-index: 0;
-    height: fit-content;
+    z-index: -1;
+    height: 100%;
+    margin: 0 auto;
   }
 
   .frm {
-    height: 60vh;
     position: relative;
-    /*     background-image: url("../assets/png/cuBg.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat; */
-
-    // padding: 20px;
 
     form {
       color: map-get($colors, colorWh);
