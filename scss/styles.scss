@@ -70,17 +70,15 @@ $F-size: (
 }
 
 header {
+  width: 100%;
   background-color: map-get($colors, colorRe);
-  // width: 100%;
-  height: 68px;
   color: map-get($colors, colorWh);
 
   #headerBox {
     @include flxMxnJust(space-between);
     width: 90%;
+    height: 68px;
     margin: 0 auto; /* MISS-ALIGNMENT */
-    padding: 10px;
-    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .section:first-of-type {
     font-size: map-get($F-size, Semi_Bold_32);
@@ -92,15 +90,14 @@ header {
   nav ul {
     list-style: none;
     @include flxMxn();
-    gap: 20px;
+    gap: 2rem;
     margin: 0;
     padding-left: 0;
   }
   nav ul a {
-    color: map-get($colors, colorWh);
     display: block;
     width: max-content;
-    // vertical-align: middle;
+    color: map-get($colors, colorWh);
     text-decoration: none;
     font-size: map-get($F-size, Regular_18);
   }
@@ -111,8 +108,6 @@ header {
     @include flxMxn;
     box-sizing: border-box;
     text-align: center;
-    margin: 0 5px;
-    padding: 0 10px 0 0;
   }
   .section:nth-child(3) {
     .search-container {
@@ -123,7 +118,7 @@ header {
       overflow: hidden;
       height: 38px;
       width: 214px;
-      margin-right: 1rem;
+      margin-right: 2rem;
     }
 
     .search-input {
@@ -147,23 +142,13 @@ header {
   }
   .section:nth-last-child(1) {
     position: relative;
+    padding-inline-end: 0;
+    margin-inline-end: 0;
+
     img:nth-child(1) {
       width: 38px;
-      position: absolute;
-      z-index: 1;
       margin: 0 auto;
-      left: 3px;
     }
-    position: relative;
-    img:nth-child(2) {
-      width: 46px;
-    }
-    /*     .ic:first-of-type {
-      position: absolute;
-      z-index: 1;
-      margin: 0 auto;
-      left: -1px;
-    } */
   }
 }
 
@@ -333,7 +318,6 @@ header {
 /* TITLES COMMON STYLING */
 
 .ttl {
-  margin-block: 1rem;
   margin-block-end: 2rem;
   text-align: center;
 
@@ -534,8 +518,8 @@ header {
 
 .contUs {
   box-sizing: border-box;
-  padding-block-end: 6rem;
-  padding-block-start: 1rem;
+  margin-block-start: 1rem;
+  margin-block-end: 6rem;
 
   & span {
     color: map-get($colors, imgOut);
@@ -545,33 +529,42 @@ header {
     // @include flxMxn();
     display: flex;
     width: 100%;
-    height: 50vh;
 
     .col {
       flex: 1;
     }
   }
 
+  .vector {
+    position: absolute;
+    width: fit-content;
+    z-index: 0;
+    height: fit-content;
+  }
+
   .frm {
-    background: url("../assets/png/cuBg.png") no-repeat;
-    background-origin: border-box;
-    background-size: 630px;
+    height: 60vh;
+    position: relative;
+    /*     background-image: url("../assets/png/cuBg.png");
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat; */
+
+    // padding: 20px;
 
     form {
       color: map-get($colors, colorWh);
-      transform: translateY(38px);
     }
 
     .row1 {
-      width: fit-content;
       margin: 0 auto;
+      width: 50%;
+
       p {
         font-size: map-get($F-size, card2);
-        @extend .row1;
+        margin: 0;
       }
-      input,
-      textarea {
+      input {
         height: 38px;
         width: 100%;
         background-color: map-get($colors, inp);
@@ -579,9 +572,11 @@ header {
         border-radius: 1rem;
         padding-inline: 1rem;
         font-size: 1rem;
+        border: none;
       }
       textarea {
         height: 103px;
+        @extend input;
       }
       button {
         display: block;
@@ -658,7 +653,6 @@ header {
 
     .footer-logo h2 {
       font-size: map-get($F-size, Semi_Bold_32);
-
       margin-bottom: 20px;
     }
 
@@ -750,10 +744,15 @@ header {
     }
     //
     .social-icons {
+      margin-block-start: 1rem;
+
       a {
-        margin: 0 10px;
-        font-size: 24px;
+        margin-inline-end: 10px;
+        font-size: 16px;
         color: map-get($colors, colorYl);
+        border: map-get($colors, colorYl) 1px solid;
+        padding: 5px;
+        border-radius: 10px;
         text-decoration: none;
 
         &:hover {
@@ -775,205 +774,204 @@ header {
       padding-block-end: 0;
     }
   }
-}
+  // .pcontainer {
+  // }
 
-/* Arul - start*/
+  /* Arul - start*/
 
-/*--profile-arulkumar----*/
-.pcontainer {
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-}
-.col1 {
-  flex: 8%;
-  margin-top: 30px;
-}
-.col2 {
-  flex: 30%;
-  margin-left: 16px;
-  margin-top: 30px;
-  height: auto;
-}
-.profileimg {
-  width: 384px;
-  height: 368px;
-  margin-left: 28px;
-}
-.name {
-  display: inline;
-  color: #581845;
-}
-#locationicon {
-  font-size: 20px;
-  color: #900c3f;
-  margin-left: 10px;
-}
-#bookicon {
-  font-size: 26px;
-  color: #900c3f;
-  display: end;
-}
-.bookmark {
-  float: inline-end;
-}
-.row1 {
-  height: 80px;
-}
-.ratingvalue {
-  font-weight: bold;
-  color: #581845;
-  display: inline;
-}
-#star1,
-#star2,
-#star3,
-#star4 {
-  color: #ffc300;
-  font-size: 20px;
-  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-}
-#star5 {
-  color: #ffff;
-  font-size: 20px;
-  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-}
-.circle {
-  width: 98px;
-  height: 98px;
-  border-radius: 54px;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  padding-top: 0px;
-  color: #c70039;
-  float: left;
-  margin-right: 58px;
-}
-.circle p {
-  margin-top: 0px;
-}
-.circle h2 {
-  margin-bottom: 0px;
-}
-.clearfix {
-  clear: both;
-}
-.row3 {
-  margin-top: 12px;
-}
-.formelement {
-  float: left;
-  margin-right: 32px;
-}
-.formelement h5 {
-  color: #360427;
-}
-.servicetype {
-  width: 216px;
-  padding: 6px 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #c70039;
-  color: #ffff;
-  font-weight: 600;
-}
-#commentbox {
-  width: 464px;
-  height: 162px;
-  border: none;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 36px;
-  border-radius: 6px;
-  color: #360427;
-  padding: 6px 12px;
-  font-size: 18px;
-}
-#btnbook {
-  width: 336px;
-  height: 58px;
-  border-radius: 8px;
-  color: #ffff;
-  background-color: #ff5733;
-  font-weight: bold;
-  font-size: 36px;
-  margin-top: 36px;
-  border: none;
-}
+  /*--profile-arulkumar----*/
 
-/* ----tab----*/
-.row5 {
-  margin-top: 46px;
-}
-.tab-titles {
-  display: flex;
-  margin: 20px 0 40px;
-  padding-bottom: -4px;
-  border-bottom: 4px solid #ebebeb;
-}
-.tab-links {
-  margin-right: 54px;
-  font-size: 22px;
-  font-weight: 500;
-  cursor: pointer;
-  position: relative;
-  color: #360427;
-}
-.tab-links::after {
-  color: #c70039;
-}
-.tab-links::after {
-  content: "";
-  width: 0;
-  height: 4px;
-  background: #c70039;
-  position: absolute;
-  left: 0;
-  bottom: -26px;
-  transition: 0.5s;
-}
-.tab-links.active-tab::after {
-  width: 100%;
-  color: #c70039;
-}
-.tab-contents {
-  display: none;
-}
-.tab-contents.active-tab {
-  display: block;
-}
-/*service page ui banner---*/
-#banner {
-  position: relative;
-}
-.bannercontent {
-  position: absolute;
-  top: 350px;
-  right: 200px;
-  text-align: center;
-}
-.bannercontent h1 {
-  color: #ff2d00;
-  font-weight: bold;
-  font-size: 56px;
-  margin-bottom: 0;
-}
-.bannercontent p {
-  color: #581845;
-  margin-top: 4px;
-  font-size: 20px;
-}
-.btnbanner {
-  width: 332px;
-  height: 52px;
-  border: none;
-  border-radius: 12px;
-  color: #581845;
-  background-color: #ffc300;
-  font-weight: bold;
-  font-size: 24px;
-}
+  #profile {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .col1 {
+    flex: 8%;
+    margin-top: 30px;
+  }
+  .col2 {
+    flex: 30%;
+    margin-left: 16px;
+    margin-top: 30px;
+    height: auto;
+  }
+  .profileimg {
+    width: 384px;
+    height: 368px;
+    margin-left: 28px;
+  }
+  .name {
+    display: inline;
+    color: #581845;
+  }
+  #locationicon {
+    font-size: 20px;
+    color: #900c3f;
+    margin-left: 10px;
+  }
+  #bookicon {
+    font-size: 26px;
+    color: #900c3f;
+    display: end;
+  }
+  .bookmark {
+    float: inline-end;
+  }
+  .ratingvalue {
+    font-weight: bold;
+    color: #581845;
+    display: inline;
+  }
+  #star1,
+  #star2,
+  #star3,
+  #star4 {
+    color: #ffc300;
+    font-size: 20px;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  }
+  #star5 {
+    color: #ffff;
+    font-size: 20px;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  }
+  .circle {
+    width: 98px;
+    height: 98px;
+    border-radius: 54px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding-top: 0px;
+    color: #c70039;
+    float: left;
+    margin-right: 58px;
+  }
+  .circle p {
+    margin-top: 0px;
+  }
+  .circle h2 {
+    margin-bottom: 0px;
+  }
+  .clearfix {
+    clear: both;
+  }
+  .row3 {
+    margin-top: 12px;
+  }
+  .formelement {
+    float: left;
+    margin-right: 32px;
+  }
+  .formelement h5 {
+    color: #360427;
+  }
+  .servicetype {
+    width: 216px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #c70039;
+    color: #ffff;
+    font-weight: 600;
+  }
+  #commentbox {
+    width: 464px;
+    height: 162px;
+    border: none;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 36px;
+    border-radius: 6px;
+    color: #360427;
+    padding: 6px 12px;
+    font-size: 18px;
+  }
+  #btnbook {
+    width: 336px;
+    height: 58px;
+    border-radius: 8px;
+    color: #ffff;
+    background-color: #ff5733;
+    font-weight: bold;
+    font-size: 36px;
+    margin-top: 36px;
+    border: none;
+  }
 
+  /* ----tab----*/
+  .row5 {
+    margin-top: 46px;
+  }
+  .tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+    padding-bottom: -4px;
+    border-bottom: 4px solid #ebebeb;
+  }
+  .tab-links {
+    margin-right: 54px;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: #360427;
+  }
+  .tab-links::after {
+    color: #c70039;
+  }
+  .tab-links::after {
+    content: "";
+    width: 0;
+    height: 4px;
+    background: #c70039;
+    position: absolute;
+    left: 0;
+    bottom: -26px;
+    transition: 0.5s;
+  }
+  .tab-links.active-tab::after {
+    width: 100%;
+    color: #c70039;
+  }
+  .tab-contents {
+    display: none;
+  }
+  .tab-contents.active-tab {
+    display: block;
+  }
+  /*service page ui banner---*/
+  #banner {
+    position: relative;
+  }
+  .bannercontent {
+    position: absolute;
+    top: 350px;
+    right: 200px;
+    text-align: center;
+  }
+  .bannercontent h1 {
+    color: #ff2d00;
+    font-weight: bold;
+    font-size: 56px;
+    margin-bottom: 0;
+  }
+  .bannercontent p {
+    color: #581845;
+    margin-top: 4px;
+    font-size: 20px;
+  }
+  .btnbanner {
+    width: 332px;
+    height: 52px;
+    border: none;
+    border-radius: 12px;
+    color: #581845;
+    background-color: #ffc300;
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
 /*--profile-arulkumar end----*/
 
 /* Arul - end */
