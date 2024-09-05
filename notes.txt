@@ -131,3 +131,18 @@ fonts {
 }
 
 ....
+
+
+/* 
+ $F-size: (
+  "Bold_46": 46px,
+  "Semi_Bold_32": 32px,
+  "Semi_Bold_28": 28px,
+  "Medium_24": 24px,
+  "Bold_20": 20px,
+  "Regular_18": 18px,
+  // Extras
+  "card1": 54px,
+  "card2": 26px,
+  "button": 22px,
+); */
