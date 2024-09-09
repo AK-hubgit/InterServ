@@ -25,7 +25,7 @@ header #headerBox {
   justify-content: space-between;
   width: 90%;
   height: 68px;
-  margin: 0 auto; /* MISS-ALIGNMENT */
+  margin: 0 auto;
 }
 header .section:first-of-type p {
   font-size: 2rem;
@@ -77,6 +77,11 @@ header nav ul {
     gap: 0rem;
   }
 }
+@media screen and (max-width: 1024px) {
+  header nav ul {
+    gap: 1.5rem;
+  }
+}
 header nav ul a {
   display: block;
   width: -moz-max-content;
@@ -113,6 +118,11 @@ header .section:nth-child(3) .search-container {
 @media screen and (max-width: 420px) {
   header .section:nth-child(3) .search-container {
     margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .section:nth-child(3) .search-container {
+    margin-right: 1.5rem;
   }
 }
 header .section:nth-child(3) .search-input {
@@ -269,6 +279,11 @@ header .section:nth-last-child(1) img:nth-child(1) {
   font-weight: bold;
   color: #d41f4f;
   margin: 0;
+}
+@media screen and (max-width: 1024px) {
+  .about-section .about-content h2 {
+    font-size: 2.875rem;
+  }
 }
 .about-section .about-stats {
   display: flex;
@@ -488,37 +503,51 @@ header .section:nth-last-child(1) img:nth-child(1) {
 }
 .contUs .flxbx {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 50vh;
 }
 .contUs .flxbx .col {
-  height: 100%;
-  flex: 1;
+  height: 70vh;
 }
-.contUs .vector {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  margin: 0 auto;
+@media screen and (max-width: 1024px) {
+  .contUs .flxbx .col {
+    width: 50%;
+  }
 }
 .contUs .frm {
-  position: relative;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  background: url("../assets/png/cuBg.png") no-repeat center center;
+  background-size: contain;
+  background-position-y: -1px;
+}
+@media screen and (max-width: 1024px) {
+  .contUs .frm {
+    background-size: 120%;
+    background-position-y: -20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contUs .frm {
+    width: 50%;
+    background-size: 120%;
+    background-position-y: -20px;
+  }
 }
 .contUs .frm form {
   color: white;
+  padding-block-start: 4rem;
 }
-.contUs .frm .row1 {
-  margin: 0 auto;
-  width: 50%;
+.contUs .frm form div {
+  width: 100%;
 }
-.contUs .frm .row1 p {
+.contUs .frm form p {
   font-size: 1.625rem;
   margin: 0;
 }
-.contUs .frm .row1 input, .contUs .frm .row1 textarea {
+.contUs .frm form input, .contUs .frm form textarea {
   height: 38px;
   width: 100%;
   background-color: #fff0f0;
@@ -528,10 +557,10 @@ header .section:nth-last-child(1) img:nth-child(1) {
   font-size: 1rem;
   border: none;
 }
-.contUs .frm .row1 textarea {
+.contUs .frm form textarea {
   height: 103px;
 }
-.contUs .frm .row1 button {
+.contUs .frm form button {
   display: block;
   box-sizing: border-box;
   margin: 0 auto;
@@ -540,7 +569,7 @@ header .section:nth-last-child(1) img:nth-child(1) {
   background-color: #ffc300;
   font-size: 1.375rem;
 }
-.contUs .frm label {
+.contUs .frm form label {
   display: none;
 }
 .contUs .frmDets p,
@@ -625,7 +654,7 @@ header .section:nth-last-child(1) img:nth-child(1) {
   flex-direction: column;
   align-items: start !important;
 }
-.footer .footer-content .footer-newsletter form input[type=email], .footer .footer-content .footer-newsletter form .contUs .frm .row1 textarea[type=email], .contUs .frm .row1 .footer .footer-content .footer-newsletter form textarea[type=email] {
+.footer .footer-content .footer-newsletter form input[type=email], .footer .footer-content .footer-newsletter .contUs .frm form textarea[type=email], .contUs .frm .footer .footer-content .footer-newsletter form textarea[type=email] {
   box-sizing: border-box;
   width: 100%;
   padding: 10px;

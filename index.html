@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap"
       rel="stylesheet"
@@ -27,7 +32,7 @@
   <body>
     <!-- Intersev -->
     <!-- tempr using about for profile page -->
-    <header>
+    <!--  <header>
       <div id="headerBox">
         <div class="section"><p>Logo</p></div>
         <nav class="section">
@@ -61,7 +66,7 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
           </div>
-          <nav class="section" style="display: none;">
+          <nav class="section" style="display: none">
             <ul>
               <li><a href="./index.html">HOME</a></li>
               <li><a href="./profile.html">ABOUT</a></li>
@@ -73,7 +78,7 @@
           </nav>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <main>
       <section class="hero-section">
@@ -377,7 +382,6 @@
       </div>
       <div class="flxbx">
         <div class="col frm">
-          <img class="vector" src="assets/png/cuBg.png" alt="" />
           <form
             action="https://api.web3forms.com/submit"
             method="POST"
@@ -404,54 +408,52 @@
               id=""
               style="display: none"
             />
-            <!--  -->
             <!-- <img src="../assets/png/cuBg.png" alt="image type nFot supported"> -->
-            <!--  -->
-            <div class="row1">
-              <p>Please Fill The Form</p>
-              <div>
-                <label for="name">Full Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="John Doe"
-                  required
-                />
-              </div>
-              <div>
-                <label for="email">Email Address</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="you@company.com"
-                  required
-                />
-              </div>
-              <div>
-                <label for="phone">Phone Number</label>
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  placeholder="+1 (555) 1234-567"
-                  required
-                />
-              </div>
-              <div>
-                <label for="message">Your Message</label>
-                <textarea
-                  rows="5"
-                  name="message"
-                  id="message"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit">Submite</button>
+            <!-- <div class="row1"> -->
+            <p>Please Fill The Form</p>
+            <div>
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="John Doe"
+                required
+              />
             </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="you@company.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="phone">Phone Number</label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="+1 (555) 1234-567"
+                required
+              />
+            </div>
+            <div>
+              <label for="message">Your Message</label>
+              <textarea
+                rows="5"
+                name="message"
+                id="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit">Submite</button>
+            <!-- </div> -->
           </form>
         </div>
         <div class="col frmDets">

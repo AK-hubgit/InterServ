@@ -1,43 +1,7 @@
-// @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap");
-// commit reverted!git
+@import url(./_var.scss);
 
 html {
   scroll-behavior: smooth;
-}
-
-$colors: (
-  "colorDRe": #900c3f,
-  "colorRe": #c70039,
-  "colorDBl": #581845,
-  "colorGr": #daf7a6,
-  "colorWh": white,
-  "colorYl": #ffc300,
-  // Extras
-  "imgOut": #ff5733,
-  "inp": #fff0f0,
-);
-$F-weights: (
-  "Psnormal": normal,
-  "Pslight": light,
-  "PSlighter": lighter,
-  "PSbold": bold,
-  "PSbolder": bolder,
-);
-$F-size: (
-  // for better scalbility converted font sizes to rems. refer notes.txt for px sizes
-  "Bold_46": 2.875rem,
-  "Semi_Bold_32": 2rem,
-  "Semi_Bold_28": 1.75rem,
-  "Medium_24": 24px,
-  "Bold_20": 1.5rem,
-  "Regular_18": 1.125rem,
-  // Extras
-  "card1": 3.375rem,
-  "card2": 1.625rem,
-  "button": 1.375rem
-);
-@function get-font-size($size) {
-  @return map-get($F-size, calc($size - 0.125rem));
 }
 
 body {
@@ -53,39 +17,6 @@ a {
   text-decoration: none;
 }
 
-@mixin flxMxn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@mixin flxMxnJust($justCont) {
-  display: flex;
-  align-items: center;
-  justify-content: $justCont;
-}
-
-// md - queries
-@mixin media-sm {
-  @media screen and (max-width: 420px) {
-    @content;
-  }
-}
-@mixin media-md {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-@mixin media-lg {
-  @media screen and (max-width: 1024px) {
-    @content;
-  }
-}
-@mixin media-xlg {
-  @media screen and (max-width: 1140px) {
-    @content;
-  }
-}
-
 header {
   width: 100%;
   background-color: map-get($colors, colorRe);
@@ -95,7 +26,7 @@ header {
     @include flxMxnJust(space-between);
     width: 90%;
     height: 68px;
-    margin: 0 auto; /* MISS-ALIGNMENT */
+    margin: 0 auto;
   }
   .section:first-of-type {
     p {
@@ -139,11 +70,15 @@ header {
     list-style: none;
     @include flxMxn();
     gap: 2rem;
+    margin: 0;
+    padding-left: 0;
+
     @include media-sm() {
       gap: 0rem;
     }
-    margin: 0;
-    padding-left: 0;
+    @include media-lg() {
+      gap: 1.5rem;
+    }
   }
   nav ul a {
     display: block;
@@ -176,6 +111,9 @@ header {
       margin-right: 2rem;
       @include media-sm {
         margin-right: 1rem;
+      }
+      @include media-lg {
+        margin-right: 1.5rem;
       }
     }
 
@@ -356,7 +294,7 @@ header {
     margin: 0;
 
     @include media-lg {
-      font-size: get-font-size("Semi_Bold_32");
+      font-size: get-font-size("Bold_46");
     }
   }
 
@@ -607,34 +545,43 @@ header {
   }
 
   .flxbx {
-    @include flxMxn();
+    @include flxMxnJust(space-between);
     width: 100%;
-    height: 50vh;
 
     .col {
-      height: 100%;
-      flex: 1;
+      height: 70vh;
+      @include media-lg() {
+        width: 50%;
+      }
     }
-  }
-
-  .vector {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    margin: 0 auto;
   }
 
   .frm {
-    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    background: url("../assets/png/cuBg.png") no-repeat center center;
+    background-size: contain;
+    background-position-y: -1px;
+
+    
+    @include media-lg() {
+      background-size: 120%;
+      background-position-y: -20px;
+    }
+    @include media-md() {
+      width: 50%;
+      background-size: 120%;
+      background-position-y: -20px;
+    }
 
     form {
       color: map-get($colors, colorWh);
-    }
+      padding-block-start: 4rem;
 
-    .row1 {
-      margin: 0 auto;
-      width: 50%;
+      div {
+        width: 100%;
+      }
 
       p {
         font-size: map-get($F-size, card2);
@@ -664,10 +611,11 @@ header {
         background-color: map-get($colors, colorYl);
         font-size: map-get($F-size, button);
       }
-    }
+      // }
 
-    label {
-      display: none;
+      label {
+        display: none;
+      }
     }
   }
 
