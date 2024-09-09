@@ -1,0 +1,72 @@
+$colors: (
+  "colorDRe": #900c3f,
+  "colorRe": #c70039,
+  "colorDBl": #581845,
+  "colorGr": #daf7a6,
+  "colorWh": white,
+  "colorYl": #ffc300,
+  // Extras
+  "imgOut": #ff5733,
+  "inp": #fff0f0,
+);
+$F-weights: (
+  "Psnormal": normal,
+  "Pslight": light,
+  "PSlighter": lighter,
+  "PSbold": bold,
+  "PSbolder": bolder,
+);
+$F-size: (
+  // for better scalbility converted font sizes to rems. refer notes.txt for px sizes
+  "Bold_46": 2.875rem,
+  "Semi_Bold_32": 2rem,
+  "Semi_Bold_28": 1.75rem,
+  "Medium_24": 24px,
+  "Bold_20": 1.5rem,
+  "Regular_18": 1.125rem,
+  // Extras
+  "card1": 3.375rem,
+  "card2": 1.625rem,
+  "button": 1.375rem
+);
+@function get-font-size($size) {
+  @return map-get($F-size, $size);
+}
+
+
+@mixin flxMxn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @mixin flxMxnJust($justCont) {
+    display: flex;
+    align-items: center;
+    justify-content: $justCont;
+  }
+  
+  // md - queries
+  @mixin media-sm {
+    @media screen and (max-width: 420px) {
+      @content;
+    }
+  }
+  @mixin media-md {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @mixin media-lg {
+    @media screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @mixin media-xlg {
+    @media screen and (max-width: 1140px) {
+      @content;
+    }
+  }
+  @function set-media-width($device,$size) {
+    @return media-$device, $size;
+  }
+  
