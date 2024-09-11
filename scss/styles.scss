@@ -27,6 +27,9 @@ header {
     width: 90%;
     height: 68px;
     margin: 0 auto;
+    @include media-lg {
+      width: 95%;
+    }
   }
   .section:first-of-type {
     p {
@@ -550,7 +553,12 @@ header {
 
     .col {
       height: 70vh;
-      @include media-lg() {
+    }
+    @include media-lg {
+      @include flxMxnJust(left);
+
+      .col {
+        height: 60vh;
         width: 50%;
       }
     }
@@ -564,7 +572,6 @@ header {
     background-size: contain;
     background-position-y: -1px;
 
-    
     @include media-lg() {
       background-size: 120%;
       background-position-y: -20px;
