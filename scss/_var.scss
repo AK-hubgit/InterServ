@@ -33,40 +33,73 @@ $F-size: (
   @return map-get($F-size, $size);
 }
 
-
 @mixin flxMxn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flxMxnJust($justCont) {
+  display: flex;
+  align-items: center;
+  justify-content: $justCont;
+}
+
+// md - queries
+@mixin media-sm {
+  @media screen and (max-width: 420px) {
+    @content;
   }
-  @mixin flxMxnJust($justCont) {
-    display: flex;
-    align-items: center;
-    justify-content: $justCont;
+}
+@mixin media-md {
+  @media screen and (max-width: 768px) {
+    @content;
   }
-  
-  // md - queries
-  @mixin media-sm {
-    @media screen and (max-width: 420px) {
-      @content;
-    }
+}
+@mixin media-lg {
+  @media screen and (max-width: 1024px) {
+    @content;
   }
-  @mixin media-md {
-    @media screen and (max-width: 768px) {
-      @content;
-    }
+}
+@mixin media-xlg {
+  @media screen and (max-width: 1140px) {
+    @content;
   }
-  @mixin media-lg {
-    @media screen and (max-width: 1024px) {
-      @content;
-    }
-  }
-  @mixin media-xlg {
-    @media screen and (max-width: 1140px) {
-      @content;
-    }
-  }
-  @function set-media-width($device,$size) {
+}
+/*  @function set-media-width($device,$size) {
     @return media-$device, $size;
+  } */
+
+/* @mixin media-query($size, $type: max) {
+  @if $type == max {
+    @media screen and (max-width: $size) {
+      @content;
+    }
+  } @else if $type == min {
+    @media screen and (min-width: $size) {
+      @content;
+    }
   }
-  
+} */
+
+
+/* 
+@mixin media-sm {
+  @include media-query(420px);
+}
+
+@mixin media-md {
+  @include media-query(768px);
+}
+
+@mixin media-lg {
+  @include media-query(1024px);
+}
+
+@mixin media-xlg {
+  @include media-query(1140px);
+}
+
+@mixin media-sm-min {
+  @include media-query(420px, min);
+}
+ */
