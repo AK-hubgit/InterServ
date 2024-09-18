@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./scss/styles.css" />
+    
+
+
+    <script defer src="index.js"></script>
+    <title>profile</title>
+  </head>
+  <body>
+    <!-- Intersev -->
+    <header>
+      <div id="headerBox">
+        <div class="section">Logo</div>
+        <nav class="section">
+          <ul>
+            <li><a href="#HOME">HOME</a></li>
+            <li><a href="#SERVICES">ABOUT</a></li>
+            <li><a href="#SERVICES">SERVICES</a></li>
+            <li><a href="#WHY_CHOOSE_US">WHY CHOOSE US</a></li>
+            <li><a href="#TESTIMONIALS">TESTIMONIALS</a></li>
+            <li><a href="#CONTACT">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div id="seeServ" class="section">
+          <!--  -->
+          <div class="search-container">
+            <input
+              type="text"
+              placeholder="Search Services"
+              class="search-input"
+            />
+            <button class="search-button"><i class="fa fa-search"></i></button>
+          </div>
+          <div id="profile" class="section">
+            <img
+              class="ic"
+              src="./assets/png/user1.png"
+              alt="img format not supported"
+            />
+            <img
+              class="ic"
+              src="./assets/png/user2.png"
+              alt="img format not supported"
+            />
+          </div>
+          <!--  -->
+        </div>
+      </div>
+    </header>
+
+    <!-----Section1-->
+
+    <div class="pcontainer">
+      <div class="col1">
+        <img
+          src="./assets/profile.png"
+          class="profileimg"
+          alt="profile_image"
+        />
+      </div>
+
+      <div class="col2">
+        <h1 class="name">Hara Down</h1>
+        <span><i class="fa-solid fa-location-dot" id="locationicon"></i></span>
+        <span style="color: #900c3f">Chennai</span>
+        <div class="bookmark">
+          <i class="fa-solid fa-bookmark" id="bookicon"></i>
+          <span style="color: #900c3f">Bookmark</span>
+        </div>
+        <p style="color: #ff5733; font-weight: 500">Technician</p>
+
+        <div class="row1">
+          <p style="color: #900c3f">Ratings</p>
+          <h3 class="ratingvalue">4.5</h3>
+          <i class="fa-solid fa-star" id="star1"></i>
+          <i class="fa-solid fa-star" id="star2"></i>
+          <i class="fa-solid fa-star" id="star3"></i>
+          <i class="fa-solid fa-star" id="star4"></i>
+          <i class="fa-solid fa-star" id="star5"></i>
+        </div>
+
+        <div class="row2">
+          <div class="circle">
+            <h2>2.5K</h2>
+            <p>Projects</p>
+          </div>
+          <div class="circle">
+            <h2>4.5</h2>
+            <p>Ratings</p>
+          </div>
+          <div class="circle">
+            <h2>2</h2>
+            <p>Experiences</p>
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row3">
+          <div class="formelement">
+            <h5>Type of Appliances</h5>
+            <form>
+              <select class="servicetype" name="services">
+                <option value="home">Home Appliances</option>
+                <option value="room">Room Services</option>
+                <option value="beauty">Beautician</option>
+                <option value="mech">Mechanic</option>
+                <option value="nurse">Home Nursing</option>
+                <option value="plum">Plumbers</option>
+                <option value="electr">Electrician</option>
+              </select>
+            </form>
+          </div>
+          <div class="formelement">
+            <h5>Choose the Problem</h5>
+            <form>
+              <select class="servicetype" name="services">
+                <option value="servic">Ac Service</option>
+                <option value="clean">Filter Cleaning</option>
+                <option value="comp">Compressor Change</option>
+              </select>
+            </form>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row4">
+          <textarea
+            id="commentbox"
+            name="message"
+            placeholder="Comment Your Problems"
+          ></textarea>
+        </div>
+        <button id="btnbook">Book Now</button>
+
+        <div class="tab-titles">
+          <p class="tab-links active-tab" onclick="opentab('timeline')">
+            Timeline
+          </p>
+          <p class="tab-links" onclick="opentab('about')">About</p>
+          <p class="tab-links" onclick="opentab('review')">Review</p>
+        </div>
+        <div class="tab-contents active-tab" id="timeline">
+          <p>
+            Click edit button to change this text. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut elit tellus, luctus nec.
+            <br /><br />Click edit button to change this text. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.
+            <br /><br />Click edit button to change this text. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.
+          </p>
+        </div>
+        <div class="tab-contents" id="about">
+          <p>
+            Click edit button to change this text. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut elit tellus, luctus nec.
+          </p>
+        </div>
+        <div class="tab-contents" id="review">
+          <p>
+            Click edit button to change this text. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut elit tellus, luctus nec.Click edit
+            button to change this text. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Ut elit tellus, luctus nec.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-----Section1 end-->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Logo</h2>
+            <div class="footer-social-media">
+              <h3>Social Media</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-menu">
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">SERVICES</a></li>
+              <li><a href="#">WHY CHOOSE US</a></li>
+              <li><a href="#">TESTIMONIAL</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </div>
+          <div class="footer-menu">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Support us</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>NEWS LETTER</h3>
+            <form>
+              <input type="email" placeholder="Mail Address" />
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+            <div class="footer-download">
+              <h3>Download</h3>
+              <div class="download-buttons">
+                <a href="#"
+                  ><img
+                    src="./assets/store1.png"
+                    alt="Android image not supported"
+                  />
+                </a>
+                <a href="#"
+                  ><img src="./assets/store2.png" alt="Mac image not supported"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright &copy; 2024.</p>
+        </div>
+      </div>
+    </footer>
+    <!--  -->
+  </body>
+</html>
+
+  </body>
+</html>

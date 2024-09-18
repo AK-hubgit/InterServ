@@ -1,0 +1,133 @@
+HERE THE BRIEF DETAILS TO FOLLOW ALONG DEVELOPING FOR MY FELLOW DEVELOPERS.
+
+Classes ---
+
+To navigate to a specific lines.
+
+.title {
+    class="ttl abt"
+    // About
+    class="ttl orserv"
+    // Our Services
+    class="ttl whChus"
+    // Why Choose Us
+}
+
+
+//
+
+    <main>
+      <!-- FF5733 -->
+      <article id="arte">
+        <h1>Service Hub Convenience</h1>
+        <p>Welcome to ServiceHub: Your Ultimate Service Destination</p>
+      </article>
+      <div class="info">
+        <button>Explore our Services</button>
+      </div>
+    </main>
+
+//
+
+
+ERRORS
+  An alignment bug: ?
+
+  #headerBox {
+    @include flxMxnJust(center);
+    width: 90%;
+    // margin: 0 auto; MISS-ALIGNMENT
+  }
+  not solved yet.
+
+.....
+
+fonts {
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins//Poppins-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Continue for other weights like Medium, SemiBold, Bold, ExtraBold, Black, etc. */
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* h1 {
+  font (
+    
+  )
+} */
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins//Poppins-Bold.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+  
+}
+
+....
