@@ -1,6 +1,5 @@
 body {
-  margin: 0;
-  padding: 0;
+    
   font-family: "Poppins", sans-serif;
 }
 
@@ -513,7 +512,144 @@ header .section:nth-last-child(1) img:nth-child(2) {
   font-size: 26px;
 }
 
-/* FOOTER */
+/* Pradyumn Pratap Singh -  start */
+.rating-cards{
+  display: flex;
+  font-family: Arial, "Poppins", sans-seri;
+  margin: 0;
+  padding: 0;
+}
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ddd;
+}
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+.main-content p{
+  color:#900C3F;
+}
+h1 {
+  color: #333;
+  margin-top: 0;
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+.filter-section {
+  margin-bottom: 20px;
+  color: #900C3F;
+
+}
+.filter-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 252px;
+  height: 30px;
+  top: 710px;
+  left: 39px;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+
+
+
+}
+.filter-options {
+  list-style-type: none;
+  padding-left: 0;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+
+}
+.filter-options li {
+  margin-bottom: 5px;
+}
+.chevron::after {
+  content: '\25BC';
+  font-size: 12px;
+}
+.technician-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.technician-card {
+  background-color: #dc0a2d;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+.technician-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  overflow: hidden;
+}
+.technician-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.technician-name {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.technician-title {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+.star-rating {
+  color: #ffd700;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-outline {
+  background-color: white;
+  color: #dc0a2d;
+}
+.btn-yellow {
+  background-color: #ffd700;
+  color: #dc0a2d;
+}
+.view-more {
+  display: block;
+  width: 150px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #90ee90;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+/* Pradyumn Pratap Singh - end */
+
 .footer {
   background-color: #5b1b44;
   color: #fff;
@@ -622,6 +758,8 @@ header .section:nth-last-child(1) img:nth-child(2) {
   padding: 1rem;
   padding-block-end: 0;
 }
+
+
 
 /* Arul - start*/
 /*--profile-arulkumar----*/
@@ -860,3 +998,6 @@ header .section:nth-last-child(1) img:nth-child(2) {
 
 /*--profile-arulkumar end----*/
 /* Arul - end *//*# sourceMappingURL=styles.css.map */
+
+/*--services-Pradyumn ----start */
+
